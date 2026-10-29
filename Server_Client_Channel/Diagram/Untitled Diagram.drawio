@@ -1,13 +1,19 @@
 <mxfile host="Electron">
   <diagram name="Page-1" id="jThgalnlysvzP4u29ihH">
-    <mxGraphModel dx="1880" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1445" dy="362" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="fTxmd4n2WzLhlIQ7zCqV-1" edge="1" parent="1" source="YOND9ZrDzFD91UMUTt7w-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;dashed=1;" target="GXYQr6XOIkCHbXFMwDUw-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="YOND9ZrDzFD91UMUTt7w-1" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Server&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- array: Channel[3]&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ write_channel(Channel_ID_t, int): bool&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ bind(Channel_ID_t): Channel &amp;amp;&lt;/p&gt;" vertex="1">
           <mxGeometry height="90" width="240" x="-340" y="400" as="geometry" />
         </mxCell>
         <mxCell id="YOND9ZrDzFD91UMUTt7w-4" edge="1" parent="1" source="YOND9ZrDzFD91UMUTt7w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;dashed=1;" target="YOND9ZrDzFD91UMUTt7w-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fTxmd4n2WzLhlIQ7zCqV-2" edge="1" parent="1" source="YOND9ZrDzFD91UMUTt7w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;dashed=1;" target="GXYQr6XOIkCHbXFMwDUw-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="YOND9ZrDzFD91UMUTt7w-2" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Client&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- channel_ptr:Channel*&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Client(Server&amp;amp;, Channel_ID_t)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ read(): int&lt;/p&gt;" vertex="1">
@@ -21,6 +27,9 @@
         </mxCell>
         <mxCell id="YOND9ZrDzFD91UMUTt7w-6" edge="1" parent="1" source="YOND9ZrDzFD91UMUTt7w-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.017;entryY=0.826;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="YOND9ZrDzFD91UMUTt7w-3">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GXYQr6XOIkCHbXFMwDUw-12" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;b style=&quot;&quot;&gt;enum:&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff)); text-align: left;&quot;&gt;Channel_ID_t&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;Speed&lt;br&gt;Temp&lt;br&gt;RPM&lt;br&gt;NUM_OF_TYPES&lt;/p&gt;" vertex="1">
+          <mxGeometry height="100" width="160" x="-585" y="460" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
