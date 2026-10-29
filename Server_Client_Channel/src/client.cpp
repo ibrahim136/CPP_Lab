@@ -6,5 +6,5 @@ Client::Client(Server &S, Channel_ID_t ID)
 }
 int Client::read()
 {
-    return channel_ptr->Read().second;
+    return channel_ptr->Read();
 }

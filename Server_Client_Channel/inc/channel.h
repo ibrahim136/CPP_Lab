@@ -1,8 +1,8 @@
 #ifndef _CHANNEL_H_
 #define _CHANNEL_H_
-#define default_capacity 10
+#define default_capacity 5
 
-#include <utility>
+#include <stdlib.h>
 
 class Channel
 {
@@ -20,7 +20,7 @@ public:
     Channel(int capacity);
     Channel(int * array,int capacity);
     ~Channel();
-    std::pair<bool,int> Read();
+    int Read();
     bool write(int value);
 };
 

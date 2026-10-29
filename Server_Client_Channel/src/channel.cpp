@@ -52,15 +52,15 @@ bool Channel::is_full()
     return count == capacity;
 }
 
-std::pair<bool, int> Channel::Read()
+int Channel::Read()
 {
     if (is_empty()){
-        return std::make_pair(false,0);
+        return INT_MIN;
     }
     int ret = array[read_index];
     read_index = increment_index(read_index);
     count--;
-    return std::make_pair(true, ret);
+    return ret;
 }
 
 bool Channel::write(int value)
