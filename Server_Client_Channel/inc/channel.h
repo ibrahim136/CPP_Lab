@@ -1,8 +1,8 @@
 #ifndef _CHANNEL_H_
 #define _CHANNEL_H_
-#define default_capacity 5
+static constexpr int DEFAULT_CAPACITY = 5;
 
-#include <stdlib.h>
+#include <climits>
 
 class Channel
 {
@@ -19,8 +19,9 @@ public:
     Channel ();
     Channel(int capacity);
     Channel(int * array,int capacity);
+    Channel(const Channel&) = delete;
     ~Channel();
-    int Read();
+    int read();
     bool write(int value);
 };
 

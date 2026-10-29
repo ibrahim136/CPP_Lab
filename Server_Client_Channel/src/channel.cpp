@@ -2,8 +2,8 @@
 
 Channel::Channel()
 {
-    capacity = default_capacity;
-    array = new int[default_capacity];
+    capacity = DEFAULT_CAPACITY;
+    array = new int[DEFAULT_CAPACITY];
     read_index = 0;
     write_index = 0;
     count =0;
@@ -33,7 +33,7 @@ Channel::Channel(int *array, int capacity)
 
 Channel::~Channel()
 {
-    delete array;
+    delete [] array;
     array = nullptr;
 }
 
@@ -52,7 +52,7 @@ bool Channel::is_full()
     return count == capacity;
 }
 
-int Channel::Read()
+int Channel::read()
 {
     if (is_empty()){
         return INT_MIN;
