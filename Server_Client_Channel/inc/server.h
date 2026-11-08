@@ -12,7 +12,7 @@ typedef enum{
 
 class Server{
     private:
-    Channel array[NUM_OF_TYPES];
+    Channel_RPM array[5];
 
     public:
     bool write_channel(Channel_ID_t Copy_enuChannelID, int data);

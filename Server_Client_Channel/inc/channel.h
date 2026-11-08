@@ -7,7 +7,6 @@ static constexpr int DEFAULT_CAPACITY = 5;
 class Channel
 {
 private:
-    int *array;
     int capacity;
     int count;
     int read_index;
@@ -15,16 +14,27 @@ private:
     int increment_index(int index);
     bool is_empty();
     bool is_full();
+
 public:
-    Channel ();
+    Channel();
     Channel(int capacity);
-    Channel(int * array,int capacity);
-    Channel(const Channel&) = delete;
-    ~Channel();
+    Channel(const Channel &) = delete;
+    virtual ~Channel();
+    virtual int read() =0;
+    virtual bool write(int value)=0;
+};
+
+class Channel_RPM : public Channel
+{
+private:
+    int *array;
+
+public:
+    Channel_RPM();
+    Channel_RPM(int capacity);
+    Channel_RPM(int* array, int capacity);
     int read();
     bool write(int value);
 };
-
-
 
 #endif

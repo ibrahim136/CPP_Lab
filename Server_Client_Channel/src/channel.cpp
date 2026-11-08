@@ -3,7 +3,6 @@
 Channel::Channel()
 {
     capacity = DEFAULT_CAPACITY;
-    array = new int[DEFAULT_CAPACITY];
     read_index = 0;
     write_index = 0;
     count =0;
@@ -12,30 +11,12 @@ Channel::Channel()
 Channel::Channel(int capacity)
 {
     this->capacity = capacity;
-    array = new int[capacity];
     read_index = 0;
     write_index = 0;
     count =0;
 }
 
-Channel::Channel(int *array, int capacity)
-{
-    this->capacity = capacity;
-    this->array = new int[capacity];
-    for (int i{0}; i < capacity; i++)
-    {
-        this->array[i] = array[i];
-    }
-    read_index = 0;
-    write_index = 0;
-    count = this->capacity;
-}
-
-Channel::~Channel()
-{
-    delete [] array;
-    array = nullptr;
-}
+Channel::~Channel(){}
 
 int Channel::increment_index(int index)
 {
@@ -52,16 +33,7 @@ bool Channel::is_full()
     return count == capacity;
 }
 
-int Channel::read()
-{
-    if (is_empty()){
-        return INT_MIN;
-    }
-    int ret = array[read_index];
-    read_index = increment_index(read_index);
-    count--;
-    return ret;
-}
+
 
 bool Channel::write(int value)
 {
@@ -73,3 +45,23 @@ bool Channel::write(int value)
     count++;
     return true;
 }
+
+Channel_RPM::Channel_RPM() : array{new int [capacity]}{}
+
+Channel_RPM::Channel_RPM(int capacity) : Channel(capacity) array{new int [capacity]}{}
+
+
+Channel_RPM::Channel_RPM(int* array,int capacity) : Channel(capacity) array{array}{}
+
+int Channel_RPM::read()
+{
+    if (is_empty()){
+        return INT_MIN;
+    }
+    int ret = array[read_index];
+    read_index = increment_index(read_index);
+    count--;
+    return ret;
+}
+
+bool 
