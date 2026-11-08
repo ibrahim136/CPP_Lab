@@ -3,13 +3,12 @@
 
 #include "server.h"
 
-class Client
-{
+class Client {
 private:
     Channel *channel_ptr;
 
 public:
-    Client(Server & S ,Channel_ID_t ID);
+    Client(Server &S, Channel_ID_t ID);
     int read();
 };
 
