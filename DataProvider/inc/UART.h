@@ -6,8 +6,8 @@
 class UART: public ICommBus
 {
     public:
-    UART();
-    ~UART();
+    UART() = default;
+    ~UART() = default;
     void send(int x);
 };
 
