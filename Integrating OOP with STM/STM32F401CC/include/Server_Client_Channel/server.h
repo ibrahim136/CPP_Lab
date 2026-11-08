@@ -12,7 +12,7 @@ typedef enum {
 
 class Server {
 private:
-    Channel* array[NUM_OF_TYPES];
+    Channel* array[NUM_OF_TYPES]; 
 
 public:
     Server();

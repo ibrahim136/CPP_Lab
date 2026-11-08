@@ -7,7 +7,6 @@ extern "C" {
 
 #include "client.h"
 #include "server.h"
-#include <variant>
 
 int main(void) {
     RCC_enuCTRLPeripheral(Peripheral_GPIOA, Peripheral_Enable);
@@ -37,8 +36,8 @@ int main(void) {
         GPIO_enuPinReadInput(GPIO_PORTB, PIN0, &buttonState);
         
         myServer.write_channel(Speed, (int)buttonState);
-        ChannelData data = myClient.read();
-        readValue = std::get<int>(data);
+        
+        readValue = myClient.read(); 
 
         if (readValue == PIN_HIGH) {
             HLED_enuTurnOn(PINA0);

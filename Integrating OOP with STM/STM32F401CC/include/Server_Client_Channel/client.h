@@ -9,7 +9,7 @@ private:
 
 public:
     Client(Server &S, Channel_ID_t ID);
-    std::variant<int,float,double> read();
+    int read();
 };
 
 #endif
