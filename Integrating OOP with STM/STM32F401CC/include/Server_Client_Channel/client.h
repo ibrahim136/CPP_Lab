@@ -3,14 +3,13 @@
 
 #include "server.h"
 
-class Client
-{
+class Client {
 private:
     Channel *channel_ptr;
 
 public:
-    Client(Server & S ,Channel_ID_t ID);
-    int read();
+    Client(Server &S, Channel_ID_t ID);
+    std::variant<int,float,double> read();
 };
 
 #endif

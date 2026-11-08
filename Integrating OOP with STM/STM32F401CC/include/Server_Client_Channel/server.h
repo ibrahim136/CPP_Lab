@@ -3,21 +3,22 @@
 
 #include "channel.h"
 
-typedef enum{
+typedef enum {
     Speed,
     Temp,
     RPM,
     NUM_OF_TYPES
-}Channel_ID_t;
+} Channel_ID_t;
 
-class Server{
-    private:
-    Channel array[NUM_OF_TYPES];
+class Server {
+private:
+    Channel* array[NUM_OF_TYPES];
 
-    public:
+public:
+    Server();
+    ~Server();
     bool write_channel(Channel_ID_t Copy_enuChannelID, int data);
     Channel& bind(Channel_ID_t Copy_enuChannelID);
-
 };
 
 #endif
