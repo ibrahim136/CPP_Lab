@@ -1,4 +1,4 @@
-#include "server.h"
+#include "../inc/server.h"
 
 Server::Server() {
     array[Speed] = new Channel_Speed();

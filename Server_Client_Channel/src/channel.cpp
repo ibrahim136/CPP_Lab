@@ -1,4 +1,4 @@
-#include "channel.h"
+#include "../inc/channel.h"
 
 Channel::Channel(int capacity) {
     this->capacity = capacity;

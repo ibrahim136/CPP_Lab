@@ -1,4 +1,4 @@
-#include "client.h"
+#include "../inc/client.h"
 
 Client::Client(Server &S, Channel_ID_t ID) {
     channel_ptr = &(S.bind(ID));
